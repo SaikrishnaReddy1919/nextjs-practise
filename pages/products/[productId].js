@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 
-const AllProducts = () => {
+const ProductDetails = () => {
   const router = useRouter();
   const productId = router.query.productId;
   return (
@@ -9,4 +9,4 @@ const AllProducts = () => {
     </>
   );
 };
-export default AllProducts;
+export default ProductDetails;
