@@ -2,8 +2,8 @@ import { useRouter } from "next/router";
 
 const Docs = () => {
   const router = useRouter();
-  // setting params = []. because of pre-rendering feature of next, this params initial value
-  // will be undefined. To avoid this set it [].
+  // setting params = []. because of pre-rendering feature of next, this params initial value 
+  // will be undefined. To avoid this set it []. 
   const { params = [] } = router.query;
 
   if (params.length === 2) {
