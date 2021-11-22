@@ -21,6 +21,11 @@ const Home = () => {
             <a className="link">CEOs</a>
           </Link>
         </li>
+        <li>
+          <Link href="/news">
+            <a className="link">NEWS</a>
+          </Link>
+        </li>
       </ul>
     </>
   );
