@@ -1,4 +1,10 @@
+import { useRouter } from "next/router";
+
 const PostDetail = ({ post }) => {
+  const router = useRouter();
+  if (router.isFallback) {
+    return <h1>Loading...</h1>;
+  }
   return (
     <>
       <div>
@@ -15,15 +21,25 @@ export async function getStaticPaths() {
   const blogs = await fetch("https://jsonplaceholder.typicode.com/posts");
   const response = await blogs.json();
 
-  const paths = response.map((post) => {
-    return {
-      params: { postId: `${post.id}` },
-    };
-  });
+  //   const paths = response.map((post) => {
+  //     return {
+  //       params: { postId: `${post.id}` },
+  //     };
+  //   });
 
   return {
-    paths: paths,
-    fallback: false,
+    paths: [
+      {
+        params: { postId: `1` },
+      },
+      {
+        params: { postId: `2` },
+      },
+      {
+        params: { postId: `3` },
+      },
+    ],
+    fallback: true,
   };
 }
 export async function getStaticProps(context) {
@@ -33,9 +49,17 @@ export async function getStaticProps(context) {
     `https://jsonplaceholder.typicode.com/posts/${params.postId}`
   );
 
+  const data = await postData.json()
+
+  if(!data.id){
+      return {
+          notFound : true
+      }
+  }
+
   return {
     props: {
-      post: await postData.json(),
+      post: data,
     },
   };
 }
