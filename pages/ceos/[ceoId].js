@@ -27,6 +27,8 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const { params } = context;
+  console.log(`Regenerating CEO : ${params.ceoId}`);
+
   let ceo = await fetch(`http://localhost:4000/ceos/${params.ceoId}`);
   ceo = await ceo.json();
 
@@ -40,5 +42,6 @@ export async function getStaticProps(context) {
     props: {
       ceo: ceo,
     },
+    revalidate: 10,
   };
 }
