@@ -10,8 +10,8 @@ const Random = () => {
       </p>
       <p>
         Try changing the route after
-        'http://localhost:3000/products/(write_something_here)'. There will be
-        no file matched with your choose route, so '[productId].js' file will be
+        (http://localhost:3000/products/write_something_here). There will be
+        no file matched with your choose route, so [productId].js file will be
         rendered.
       </p>
     </>
