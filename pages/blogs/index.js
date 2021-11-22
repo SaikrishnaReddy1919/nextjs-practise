@@ -20,7 +20,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      posts: response.slice(0, 3),
+      posts: response,
     },
   };
 }
