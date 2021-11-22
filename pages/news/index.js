@@ -1,3 +1,4 @@
+import Link from 'next/link'
 
 const News = ({ news }) => {
   return (
@@ -6,8 +7,9 @@ const News = ({ news }) => {
       {news.map((n) => {
         return (
           <div key={n.id}>
-            <h1>Title : {n.title}</h1>
-            <p> {n.body}</p>
+            <Link href={`/news/${n.category}`}>
+              <a className="link">Title : {n.title} | {n.category}</a>
+            </Link>
             <hr />
           </div>
         );
