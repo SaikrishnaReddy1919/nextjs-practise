@@ -18,8 +18,8 @@ const PostDetail = ({ post }) => {
 export default PostDetail;
 
 export async function getStaticPaths() {
-  const blogs = await fetch("https://jsonplaceholder.typicode.com/posts");
-  const response = await blogs.json();
+//   const blogs = await fetch("https://jsonplaceholder.typicode.com/posts");
+//   const response = await blogs.json();
 
   //   const paths = response.map((post) => {
   //     return {

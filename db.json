@@ -1,0 +1,22 @@
+{
+  "ceos": [
+    {
+      "id": 1,
+      "name": "Elon Musk",
+      "companies": "SpaceX, Tesla",
+      "networth": "$2000B"
+    },
+    {
+      "id": 2,
+      "name": "Jeff Bezos",
+      "companies": "Blue Origin, Amazon",
+      "networth": "$150B"
+    },
+    {
+      "id": 3,
+      "name": "Saikrishna Reddy",
+      "companies": "DAOs",
+      "networth": "$1000B"
+    }
+  ]
+}
