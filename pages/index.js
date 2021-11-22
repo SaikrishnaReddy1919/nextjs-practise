@@ -26,6 +26,11 @@ const Home = () => {
             <a className="link">NEWS</a>
           </Link>
         </li>
+        <li>
+          <Link href="/dashboard">
+            <a className="link">Dashboard</a>
+          </Link>
+        </li>
       </ul>
     </>
   );

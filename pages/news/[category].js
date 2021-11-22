@@ -11,7 +11,7 @@ const NewsDetail = ({ news, category }) => {
       <div>
         {news.map((n) => {
           return (
-            <div>
+            <div key={n.id}>
               <h3>{n.title}</h3>
               <p>{n.body}</p>
             </div>
